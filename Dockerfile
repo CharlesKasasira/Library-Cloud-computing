@@ -21,4 +21,7 @@ COPY . /app/
 EXPOSE 8000
 
 # Define the command to run when the container starts
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+
+# Run Gunicorn with your Django app as the entry point
+CMD ["gunicorn", "library.wsgi:application", "--bind", "0.0.0.0:8000"]
