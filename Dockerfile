@@ -26,5 +26,10 @@ RUN pip install -r requirements.txt
 # create static directory
 # RUN mkdir static
 # RUN python manage.py collectstatic --no-input
-EXPOSE 5000
+EXPOSE 8000
+
+#run the server
+# ENTRYPOINT ["python", "library/manage.py"]
+# CMD ['runserver', '0.0.0.0:8000']
+
 CMD ["gunicorn","--bind", ":5000", "core.wsgi:application"]
