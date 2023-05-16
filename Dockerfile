@@ -12,17 +12,17 @@ COPY . /core/
 WORKDIR /core
  
 # update docker-iamage packages
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y netcat-openbsd gcc && \
-    apt-get clean
+# RUN apt-get update && \
+#     apt-get upgrade -y && \
+#     apt-get install -y netcat-openbsd gcc && \
+#     apt-get clean
  
 # update pip 
-# RUN pip install --upgrade pip
+RUN pip install --upgrade pip
 # install psycopg for connect to pgsql
-RUN pip3 install psycopg2-binary
+RUN pip install psycopg2-binary
 # install python packages 
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 # create static directory
 RUN mkdir static
 # RUN python manage.py collectstatic --no-input
