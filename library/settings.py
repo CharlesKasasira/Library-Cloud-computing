@@ -6,7 +6,7 @@ os.environ.get("SECRET_KEY")
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
-STATIC_DIR=os.path.join(BASE_DIR,'static')
+# STATIC_DIR=os.path.join(BASE_DIR,'static')
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
@@ -20,6 +20,8 @@ SECRET_KEY = 'django-insecure-#^2b7gbnl%7_xv0k3cxhp!&k@@ktjuwju$ze7_1$cpa6(k6jjm
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://library-cloud-computing-production.up.railway.app', '*']
+
+CSRF_TRUSTED_ORIGINS = ['https://library-cloud-computing-production.up.railway.app']
 
 
 # Application definition
