@@ -18,11 +18,11 @@ RUN apt-get update && \
     apt-get clean
  
 # update pip 
-RUN pip install --upgrade pip
+# RUN pip install --upgrade pip
 # install psycopg for connect to pgsql
-RUN pip install psycopg2-binary
+RUN pip3 install psycopg2-binary
 # install python packages 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 # create static directory
 RUN mkdir static
 # RUN python manage.py collectstatic --no-input
