@@ -1,11 +1,14 @@
 import os
 from pathlib import Path
+os.environ.get("SECRET_KEY")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 STATIC_DIR=os.path.join(BASE_DIR,'static')
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -16,7 +19,7 @@ SECRET_KEY = 'django-insecure-#^2b7gbnl%7_xv0k3cxhp!&k@@ktjuwju$ze7_1$cpa6(k6jjm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['muklibrary.herokuapp.com', '127.0.0.1:8000', '*']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,9 +78,9 @@ WSGI_APPLICATION = 'library.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'buohtujgbmhxshgxezjsxbvj',
-        'USER': 'ftuycapnhgbfpzbd',
-        'PASSWORD': 'ML%<#%>>wy+>LIF>o^7VQY<gMk+>t1=K',
+        'NAME': 'hhteojybmahookyfwrkxaebu',
+        'USER': 'huehpqufopsycrjl',
+        'PASSWORD': 'gF9ssnUSiSC7+fd,,pusQug%>AYj<FnQ',
         'HOST': '102.134.147.233',
         'PORT': '32761',
     }
